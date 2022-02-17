@@ -1,13 +1,8 @@
 import React from "react";
 import {AppBar, Box, Button, Toolbar, Typography} from "@mui/material";
-import {useDispatch} from "react-redux";
-import {openModal} from "../actions/modalActions";
 
-const Header = () => {
-    const dispatch = useDispatch()
-    function handleOpen () {
-        dispatch(openModal())
-    }
+
+const Header = ({setIsOpen}) => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -18,7 +13,7 @@ const Header = () => {
                     </Typography>
                     <Button
                         variant="contained"
-                        onClick={handleOpen}
+                        onClick={() => setIsOpen(true)}
                     >
                         Add Employee</Button>
                 </Toolbar>

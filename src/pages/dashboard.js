@@ -1,19 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import EmployeeTable from "../components/EmployeeTable";
-import ModalEmployee from "../components/ModalEmployee";
-import {useSelector} from "react-redux";
 
 const Dashboard = () => {
-    const {isOpen} = useSelector(state => state.modal)
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <>
-        <Header />
-        <EmployeeTable />
-        <ModalEmployee isOpen={isOpen} />
-        </>
-    )
-}
+  return (
+    <>
+      <Header setIsOpen={setIsOpen} />
+      <EmployeeTable setIsOpen={setIsOpen} isOpen={isOpen} />
+    </>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

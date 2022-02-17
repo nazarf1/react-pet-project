@@ -3,7 +3,7 @@
   height: 600px;
   border-radius: 5px;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   display: flex;
   flex-direction: column;
   padding: 25px;
@@ -36,12 +36,11 @@ h1 {
   margin: 15px;
 }
 
-//.body {
-//  margin-top: 25px;
-//  display: flex;
-//  flex-direction: column;
-//}
-
 #outlined-search {
   width: 350px;
+}
+
+.back-button {
+  height: 100%;
+  cursor: pointer;
 }
