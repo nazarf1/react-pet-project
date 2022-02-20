@@ -3,7 +3,9 @@ import { TextField } from "@mui/material";
 
 const EmployeeForm = ({ onChange, values, errors, touched }) => {
   return (
-    <>
+    <div
+      style={{ display: "grid", gridTemplateColumns: "1fr", gridGap: "15px" }}
+    >
       <TextField
         id="outlined-search"
         label="First Name"
@@ -13,7 +15,6 @@ const EmployeeForm = ({ onChange, values, errors, touched }) => {
         error={Boolean(errors.firstName) && touched.firstName}
         helperText={touched.firstName && errors.firstName}
       />
-      <br />
       <TextField
         id="outlined-search"
         label="Last Name"
@@ -23,7 +24,6 @@ const EmployeeForm = ({ onChange, values, errors, touched }) => {
         error={Boolean(errors.lastName) && touched.lastName}
         helperText={touched.lastName && errors.lastName}
       />
-      <br />
       <TextField
         id="outlined-search"
         label="Email"
@@ -33,7 +33,6 @@ const EmployeeForm = ({ onChange, values, errors, touched }) => {
         error={Boolean(errors.email) && touched.email}
         helperText={touched.email && errors.email}
       />
-      <br />
       <TextField
         id="outlined-search"
         label="Mobile number"
@@ -43,7 +42,6 @@ const EmployeeForm = ({ onChange, values, errors, touched }) => {
         error={Boolean(errors.phoneNumber) && touched.phoneNumber}
         helperText={touched.phoneNumber && errors.phoneNumber}
       />
-      <br />
       <TextField
         id="outlined-search"
         label="Salary"
@@ -53,7 +51,7 @@ const EmployeeForm = ({ onChange, values, errors, touched }) => {
         error={Boolean(errors.salary) && touched.salary}
         helperText={touched.salary && errors.salary}
       />
-    </>
+    </div>
   );
 };
 
